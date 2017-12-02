@@ -1,0 +1,13 @@
+name: ametrine
+version: 0.1.0
+
+authors:
+  -  <>
+
+targets:
+  ametrine:
+    main: src/ametrine.cr
+
+crystal: 0.23.1
+
+license: MIT
