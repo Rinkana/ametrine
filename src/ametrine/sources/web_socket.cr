@@ -7,13 +7,15 @@ module Ametrine
 
       def initialize(url : String)
         @web_socket = HTTP::WebSocket.new(url)
-        @web_socket.on_message do |str|
-          channel.send(str)
-        end
+        @web_socket.on_message &->handle_message(String)
       end
 
       def run
         @web_socket.run
+      end
+
+      def handle_message(message)
+        channel.send(message)
       end
     end
   end

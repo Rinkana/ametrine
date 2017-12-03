@@ -53,7 +53,7 @@ module Ametrine
     private def spawn_strategy(root_channel : Channel(Nil))
       spawn do
         loop do
-          p "do strategy"; Fiber.yield
+          Fiber.yield
         end
       end
     end
