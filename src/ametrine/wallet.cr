@@ -7,5 +7,9 @@ module Ametrine
     def initialize(@currency, @balance, @exponent)
 
     end
+
+    #def initialize(currency, balance : Float64)
+    #  new(currency)
+    #end
   end
 end
